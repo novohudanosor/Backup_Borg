@@ -8,7 +8,7 @@ root@vagrant:~# sudo -i -u borg
 $ mkdir .ssh
 $ touch .ssh/authorized_keys
 ```
-4. Далее на коиенте генерируем ключи
+4. Далее на клиенте генерируем ключи
 ```
  root@vagrant:~# ssh-keygen
 Generating public/private rsa key pair.
