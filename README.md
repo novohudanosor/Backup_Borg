@@ -84,7 +84,16 @@ drwxr-xr-x root   root          0 Fri, 2024-02-16 18:48:39 etc/X11/Xsession.d
 -rw-r--r-- root   root       1062 Mon, 2021-06-28 12:15:25 etc/X11/Xsession.d/20dbus_xdg-runtime
 ...
 ```
-14. Автоматизируем создание бэкапов с помощью systemd  Создаем сервис и таймер в каталоге /etc/systemd/system/
-
+14. Автоматизируем создание бэкапов с помощью systemd  Создаем **сервис и таймер** в каталоге /etc/systemd/system/
+15. Получаем 2 файла **/etc/systemd/system/borg-backup.service**   и   **/etc/systemd/system/borg-backup.timer**
+16.  Включаем и запускаем службу таймера
+```
+systemctl enable borg-backup.timer
+Created symlink /etc/systemd/system/timers.target.wants/borg-backup.timer → /etc/systemd/system/borg-backup.timer.
+root@vagrant:~# systemctl start borg-backup.timer
+```
+17. Проверяем работу таймера командой
+    ``` systemctl list-timers --all ```
+    
  
 
