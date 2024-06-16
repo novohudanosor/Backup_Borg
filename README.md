@@ -3,11 +3,11 @@
 1. ``` Vagrant up ``` поднимает 2 машины  **backup_server и client**
 2. устанавливаем Borg на 2-х машинах.
 3. на сервере создаем пользователя **borg**
-   ```
+```
 root@vagrant:~# sudo -i -u borg
 $ mkdir .ssh
 $ touch .ssh/authorized_keys
-   ```
+```
 4. Далее на коиенте генерируем ключи
 ```
  root@vagrant:~# ssh-keygen
